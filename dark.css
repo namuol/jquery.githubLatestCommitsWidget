@@ -18,10 +18,6 @@ body {
   font: 13px helvetica, arial, freesans, clean, sans-serif;
   background: #2e2e2e;
 }
-.latest-commits-widget a,
-.latest-commits-widget a:visited {
-  color: #5597d8;
-}
 .latest-commits-widget a:hover {
   text-decoration: underline;
 }
@@ -72,6 +68,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#515151', EndCo
 .latest-commits-widget ul.commit-history li .commit-message {
   font-size: 0.8em;
   text-decoration: none;
+  color: #5597d8;
 }
 .latest-commits-widget ul.commit-history li .commit-message:hover {
   text-decoration: underline;
@@ -86,15 +83,16 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#515151', EndCo
   font-size: 0.8em;
   font-weight: bold;
 }
-.latest-commits-widget ul.commit-history li .commit-author-info a,
-#latest-commits-widget ul#commit-history li .commit-author-info a:visited {
+.latest-commits-widget ul.commit-history li a,
+#latest-commits-widget ul#commit-history li a:visited {
   color: #ccc;
   text-decoration: none;
 }
 .latest-commits-widget ul.commit-history li .commit-author {
+  display: inline;
   font-weight: bold;
 }
-.latest-commits-widget ul.commit-history li .commit-author-info .commit-avatar {
+.latest-commits-widget ul.commit-history li .commit-avatar {
   height: 32px;
   width: 32px;
   border-radius: 4px;
