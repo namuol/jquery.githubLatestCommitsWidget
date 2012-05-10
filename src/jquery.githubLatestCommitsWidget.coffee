@@ -46,7 +46,7 @@
             <li>
               <div class='commit-author-info'>
                 <img class='commit-avatar' src='#{result.author.avatar_url}'>
-                <a href='https://github.com/#{result.author.login}'>i
+                <a href='https://github.com/#{result.author.login}'>
                   <span class='commit-author'>#{result.author.login}</span>
                 </a>
                 <span class='commit-date'>#{$.timeago(result.commit.committer.date)}</span>
