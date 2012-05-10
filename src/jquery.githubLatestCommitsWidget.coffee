@@ -44,15 +44,12 @@
         for result in response.data
           items_html += """
             <li>
-              <div class='commit-author-info'>
-                <img class='commit-avatar' src='#{result.author.avatar_url}'>
-                <a href='https://github.com/#{result.author.login}'>
-                  <span class='commit-author'>#{result.author.login}</span>
-                </a>
-                <span class='commit-date'>#{$.timeago(result.commit.committer.date)}</span>
-                <br />
-                <span class='commit-sha'>SHA: #{result.sha}</span>
-              </div>
+              <img class='commit-avatar' src='#{result.author.avatar_url}'>
+              <div class='commit-author'><a href='https://github.com/#{result.author.login}'>
+                #{result.author.login}
+              </a></div>
+              <div class='commit-date'>#{$.timeago(result.commit.committer.date)}</div>
+              <div class='commit-sha'>SHA: #{result.sha}</div>
               <a class='commit-message' href='https://github.com/#{@options.username}/#{@options.repo}/commit/#{result.sha}' target='_blank'>#{result.commit.message}</a>
             </li>
           """
@@ -60,7 +57,7 @@
         $(@element).html """
           <div class='latest-commits-widget'>
             <div class='latest-commits-header'>
-              <span class='latest-commits-header-text'>Latest Commits to #{@options.username}/#{@options.repo}</span>
+              <div class='latest-commits-header-text'>Latest Commits to #{@options.username}/#{@options.repo}</div>
             </div>
             <ul class='commit-history'>
             #{items_html}

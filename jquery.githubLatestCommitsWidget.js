@@ -29,9 +29,9 @@
           _ref = response.data;
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             result = _ref[_i];
-            items_html += "<li>\n  <div class='commit-author-info'>\n    <img class='commit-avatar' src='" + result.author.avatar_url + "'>\n    <a href='https://github.com/" + result.author.login + "'>\n      <span class='commit-author'>" + result.author.login + "</span>\n    </a>\n    <span class='commit-date'>" + ($.timeago(result.commit.committer.date)) + "</span>\n    <br />\n    <span class='commit-sha'>SHA: " + result.sha + "</span>\n  </div>\n  <a class='commit-message' href='https://github.com/" + _this.options.username + "/" + _this.options.repo + "/commit/" + result.sha + "' target='_blank'>" + result.commit.message + "</a>\n</li>";
+            items_html += "<li>\n  <img class='commit-avatar' src='" + result.author.avatar_url + "'>\n  <div class='commit-author'><a href='https://github.com/" + result.author.login + "'>\n    " + result.author.login + "\n  </a></div>\n  <div class='commit-date'>" + ($.timeago(result.commit.committer.date)) + "</div>\n  <div class='commit-sha'>SHA: " + result.sha + "</div>\n  <a class='commit-message' href='https://github.com/" + _this.options.username + "/" + _this.options.repo + "/commit/" + result.sha + "' target='_blank'>" + result.commit.message + "</a>\n</li>";
           }
-          return $(_this.element).html("<div class='latest-commits-widget'>\n  <div class='latest-commits-header'>\n    <span class='latest-commits-header-text'>Latest Commits to " + _this.options.username + "/" + _this.options.repo + "</span>\n  </div>\n  <ul class='commit-history'>\n  " + items_html + "\n  </ul>\n</div>");
+          return $(_this.element).html("<div class='latest-commits-widget'>\n  <div class='latest-commits-header'>\n    <div class='latest-commits-header-text'>Latest Commits to " + _this.options.username + "/" + _this.options.repo + "</div>\n  </div>\n  <ul class='commit-history'>\n  " + items_html + "\n  </ul>\n</div>");
         };
         return $.ajax("https://api.github.com/repos/" + this.options.username + "/" + this.options.repo + "/commits?callback=callback", {
           data: {
