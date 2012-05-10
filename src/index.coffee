@@ -12,22 +12,20 @@ html ->
     coffeescript ->
 
       $ ->
-        getUrlVars = ->
-          vars = []
-          hash = undefined
-          hashes = window.location.href.slice(window.location.href.indexOf("?") + 1).split("&")
-          i = 0
+        getParameterByName = (name) ->
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]")
+          regexS = "[\\?&]" + name + "=([^&#]*)"
+          regex = new RegExp(regexS)
+          results = regex.exec(window.location.search)
+          unless results?
+            ""
+          else
+            decodeURIComponent results[1].replace(/\+/g, " ")
+        
+                 
 
-          while i < hashes.length
-            hash = hashes[i].split("=")
-            vars.push hash[0]
-            vars[hash[0]] = hash[1]
-            i++
-          vars
-
-        getUrlVar = (name) ->
-          $.getUrlVars()[name]
-
-        options = getUrlVars()
+        options =
+          username: getParameterByName 'username'
+          repo: getParameterByName 'repo'
 
         $('#container').githubLatestCommitsWidget options

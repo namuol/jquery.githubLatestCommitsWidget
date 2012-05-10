@@ -1,24 +1,22 @@
 <html><head><meta charset="utf-8" /><link rel="stylesheet" href="style.css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><script src="./jquery.timeago.js"></script><script src="./jquery.githubLatestCommitsWidget.js"></script></head><body><div id="container"></div><script>var __slice = Array.prototype.slice;var __hasProp = Object.prototype.hasOwnProperty;var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };var __extends = function(child, parent) {  for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; }  function ctor() { this.constructor = child; }  ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype;  return child; };var __indexOf = Array.prototype.indexOf || function(item) {  for (var i = 0, l = this.length; i < l; i++) {    if (this[i] === item) return i;  } return -1; };(function () {
       return $(function() {
-        var getUrlVar, getUrlVars, options;
-        getUrlVars = function() {
-          var hash, hashes, i, vars;
-          vars = [];
-          hash = void 0;
-          hashes = window.location.href.slice(window.location.href.indexOf("?") + 1).split("&");
-          i = 0;
-          while (i < hashes.length) {
-            hash = hashes[i].split("=");
-            vars.push(hash[0]);
-            vars[hash[0]] = hash[1];
-            i++;
+        var getParameterByName, options;
+        getParameterByName = function(name) {
+          var regex, regexS, results;
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          regexS = "[\\?&]" + name + "=([^&#]*)";
+          regex = new RegExp(regexS);
+          results = regex.exec(window.location.search);
+          if (results == null) {
+            return "";
+          } else {
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
           }
-          return vars;
         };
-        getUrlVar = function(name) {
-          return $.getUrlVars()[name];
+        options = {
+          username: getParameterByName('username'),
+          repo: getParameterByName('repo')
         };
-        options = getUrlVars();
         return $('#container').githubLatestCommitsWidget(options);
       });
     }).call(this);</script></body></html>
