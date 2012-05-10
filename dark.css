@@ -16,11 +16,11 @@ body {
   width: 500px;
   height: 250px;
   font: 13px helvetica, arial, freesans, clean, sans-serif;
-  background: #dedede;
+  background: #2e2e2e;
 }
 .latest-commits-widget a,
 .latest-commits-widget a:visited {
-  color: #4183c4;
+  color: #5597d8;
 }
 .latest-commits-widget a:hover {
   text-decoration: underline;

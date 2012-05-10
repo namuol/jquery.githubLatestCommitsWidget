@@ -69,7 +69,7 @@
         """
 
       $.ajax(
-        "https://api.github.com/repos/#{@options.username}/#{@options.repo}/commits?callback=dummy_callback"
+        "https://api.github.com/repos/#{@options.username}/#{@options.repo}/commits?callback=callback"
         data:
           per_page: @options.limit
         dataType: 'jsonp'

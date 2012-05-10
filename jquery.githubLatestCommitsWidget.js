@@ -33,7 +33,7 @@
           }
           return $(_this.element).html("<div class='latest-commits-widget'>\n  <div class='latest-commits-header'>\n    <span class='latest-commits-header-text'>Latest Commits to " + _this.options.username + "/" + _this.options.repo + "</span>\n  </div>\n  <ul class='commit-history'>\n  " + items_html + "\n  </ul>\n</div>");
         };
-        return $.ajax("https://api.github.com/repos/" + this.options.username + "/" + this.options.repo + "/commits?callback=dummy_callback", {
+        return $.ajax("https://api.github.com/repos/" + this.options.username + "/" + this.options.repo + "/commits?callback=callback", {
           data: {
             per_page: this.options.limit
           },
