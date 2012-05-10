@@ -15,6 +15,7 @@ task 'build', 'Create compiled HTML/CSS output', ->
   fs.writeFileSync 'index.html', result
 
   console.log 'building css'
-  stylus.render fs.readFileSync('src/style.styl','utf-8'), {filename: 'style.css'}, (err, css) ->
-    throw err if err
-    fs.writeFileSync 'style.css', css
+  for theme in ['default', 'dark']
+    stylus.render fs.readFileSync("src/#{theme}.styl",'utf-8'), {filename: theme+'.css'}, (err, css) ->
+      throw err if err
+      fs.writeFileSync theme+'.css', css

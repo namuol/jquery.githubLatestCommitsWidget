@@ -60,8 +60,7 @@
         $(@element).html """
           <div class='latest-commits-widget'>
             <div class='latest-commits-header'>
-              <div class='gh-ico'></div>
-              <h4>Latest Commits to #{@options.username}/#{@options.repo}</h4>
+              <span class='latest-commits-header-text'>Latest Commits to #{@options.username}/#{@options.repo}</span>
             </div>
             <ul class='commit-history'>
             #{items_html}
@@ -82,6 +81,6 @@
   # preventing against multiple instantiations
   $.fn[pluginName] = (options) ->
     @each ->
-      if !$.data(this, "plugin_#{pluginName}")
-        $.data(@, "plugin_#{pluginName}", new Plugin(@, options))
+      #if !$.data(this, "plugin_#{pluginName}")
+      $.data(@, "plugin_#{pluginName}", new Plugin(@, options))
 )(jQuery, window)
