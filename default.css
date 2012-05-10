@@ -31,7 +31,7 @@ body {
   background-image: url("github-icons.png"), linear-gradient(center top, #f1f1f1 0%, #e1e1e1 100%);
   background-repeat: no-repeat, repeat;
   background-position: 5px -15px, 0 0;
-filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f1f1', EndColorStr='#e1e1e1');
+filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='gradient_top', EndColorStr='gradient_bottom');
   border-bottom: 1px solid #cacaca;
   color: #111;
   height: 26px;
@@ -61,7 +61,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f1f1', EndCo
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e1e1e1));
   background-image: -webkit-linear-gradient(top, #f1f1f1, #e1e1e1);
   background-image: linear-gradient(center top, #f1f1f1 0%, #e1e1e1 100%);
-filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f1f1', EndColorStr='#e1e1e1');
+filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='gradient_top', EndColorStr='gradient_bottom');
   border-bottom: 1px solid #cacaca;
   padding: 5px;
 }

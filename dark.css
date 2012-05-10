@@ -31,13 +31,13 @@ body {
   background-image: url("github-icons.png"), linear-gradient(center top, #515151 0%, #414141 100%);
   background-repeat: no-repeat, repeat;
   background-position: 5px -15px, 0 0;
-filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#515151', EndColorStr='#414141');
+filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='gradient_top', EndColorStr='gradient_bottom');
   border-bottom: 1px solid #2a2a2a;
   color: #eee;
   height: 26px;
   margin: 0;
   padding: 9px 0 0 36px;
-  text-shadow: -1px 0 1px rgba(0,0,0,0.7);
+  text-shadow: 1px 0 1px rgba(0,0,0,0.7);
   font-size: 1.3em;
   font-weight: bold;
 }
@@ -61,7 +61,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#515151', EndCo
   background-image: -webkit-gradient(linear, left top, left bottom, from(#515151), to(#414141));
   background-image: -webkit-linear-gradient(top, #515151, #414141);
   background-image: linear-gradient(center top, #515151 0%, #414141 100%);
-filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#515151', EndColorStr='#414141');
+filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='gradient_top', EndColorStr='gradient_bottom');
   border-bottom: 1px solid #2a2a2a;
   padding: 5px;
 }
@@ -79,6 +79,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#515151', EndCo
   font-style: italic;
 }
 .latest-commits-widget ul.commit-history li .commit-date {
+  display: inline;
   color: #ccc;
   font-size: 0.8em;
   font-weight: bold;
