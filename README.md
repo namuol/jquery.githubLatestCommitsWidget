@@ -1,12 +1,11 @@
-UNOFFICIAL GITHUB LATEST COMMITS WIDGET
+UNOFFICIAL GITHUB LATEST COMMITS WIDGET -- A JQUERY PLUGIN
 =========================
 
 Show the latest commit activity on your repo, keeping the community updated and giving users more incentive to contribute to your project with this widget.
 
 Inspired by https://github.com/markdotto/github-buttons
 
-Check out a demo of the widget in action @ http://tylerlh.github.com/github-latest-commits-widget/?username=plataformatec&repo=devise&limit=10
-
+[Demo](http://namuol.github.com/jquery.githubLatestCommitsWidget/?username=namuol&repo=muniverse&limit=5)
 
 Usage
 -----
@@ -34,26 +33,29 @@ The maximum number of results to list
 `theme`<br>
 Name of the theme to use.
 
-#### `'default'`
+### Available Themes
+
+'default':
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_default.png)
 
-#### `'dark'`
+'dark':
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_dark.png)
 
-#### `'mini'`
+'mini':
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_mini.png)
 
-#### `'mini-dark'`
+'mini-dark':
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_mini-dark.png)
+
+**NOTE**: Custom themes are not supported yet with the `iframe` technique yet, but I intend to add this soon.
 
 
 Things to Note
 -----------
 
-+ Width and height are hardcoded. Be sure to specify the default values (500x250) in your iframe and overload those values in the css if you want to change them.
++ Width and height are hardcoded. Be sure to specify the default values (500x250 or 300x250) in your iframe and overload those values in the css if you want to change them.
 
-+ The widget currently depends on jquery, jquery.timeago, and coffeescript. Will simplify this more and compile the coffeescript to js as time allows. 
-
++ The widget currently depends on jquery, jquery.timeago.
 
 
 Bug tracker
