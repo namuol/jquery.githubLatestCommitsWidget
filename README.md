@@ -32,7 +32,6 @@ Advanced Usage
 For custom look & feel, users are encouraged to use the jquery plugin directly.
 
 [The existing themes](#available-themes) act as a good starting point for custom theme creation.
-If you've create a new theme, [I'd love to add it to the official repo](https://github.com/namuol/jquery.githubLatestCommitsWidget/pulls)!
 
 ``` html
 <head>
@@ -88,6 +87,8 @@ Name of the theme to use.
 
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_mini-dark.png)
 
+If you've created a new theme, [I'd love to add it to the official repo](https://github.com/namuol/jquery.githubLatestCommitsWidget/pulls)!
+
 **NOTE**: Custom themes are not supported yet with the `iframe` technique yet, but I intend to add this soon.
 
 
@@ -97,7 +98,7 @@ Things to Note
 + Width and height are hardcoded. Be sure to specify the default values (500x250 or 300x250) in your iframe 
 and overload those values in the css if you want to change them.
 
-+ The widget currently depends on jquery, jquery.timeago.
++ The widget currently depends on [jquery](http://jquery.com/) and [jquery.timeago](http://timeago.yarp.com/).
 
 
 Bug tracker
