@@ -30,7 +30,6 @@
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             result = _ref[_i];
             if (!result.author) {
-              console.log(result);
               result.author = {
                 login: result.commit.author.email,
                 url: "mailto:" + result.commit.author.email,
