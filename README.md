@@ -1,20 +1,57 @@
-UNOFFICIAL GITHUB LATEST COMMITS WIDGET -- A JQUERY PLUGIN
+GITHUB LATEST COMMITS WIDGET -- A JQUERY PLUGIN
 =========================
 
-Show the latest commit activity on your repo, keeping the community updated and giving users more incentive to contribute to your project with this widget.
+Show the latest commit activity on your repo, keeping the community updated 
+and giving users more incentive to contribute to your project with this widget.
 
 Inspired by https://github.com/markdotto/github-buttons
 
 [Demo](http://namuol.github.com/jquery.githubLatestCommitsWidget/?username=namuol&repo=muniverse&limit=5)
+-----
 
 Usage
 -----
 
-This widget is hosted via GitHub Pages, meaning all you need to do is include an iframe in your html and you're good to go. There are only 3 params at the moment: username, repo, and limit.
+This widget is hosted via GitHub Pages, meaning all you need to do is include an iframe in your html 
+and you're good to go. There are only 3 required params at the moment: username, repo, and limit.
 
 ``` html
-<iframe src="http://namuol.github.com/github-latest-commits-widget/?username=USERNAME&repo=REPO&limit=LIMIT"
-  allowtransparency="true" frameborder="0" scrolling="no" width="502px" height="252px"></iframe>
+<iframe
+  src="http://namuol.github.com/jquery.githubLatestCommitsWidget/?username=USERNAME&repo=REPO&limit=LIMIT"
+  allowtransparency="true"
+  frameborder="0"
+  scrolling="no"
+  width="502px"
+  height="252px">
+</iframe>
+```
+
+Advanced Usage
+-----
+
+For custom look & feel, users are encouraged to use the jquery plugin directly.
+
+[The existing themes](#available-themes) act as a good starting point for custom theme creation.
+If you've create a new theme, [I'd love to add it to the official repo](https://github.com/namuol/jquery.githubLatestCommitsWidget/pulls)!
+
+``` html
+<head>
+  <script src='jquery.min.js'></script>
+  <script src='jquery.timeago.js'></script>
+  <script src='jquery.githubLatestCommitsWidget.js'></script>
+  <link rel='stylesheet' type='text/css' href='my_theme.css' />
+</head>
+<body>
+  <div id='latest-commits'></div>
+
+  <script src='text/javascript'>
+    $('#latest-commits').githubLatestCommitsWidget({
+      username: 'USERNAME',
+      repo: 'REPO',
+      limit: 20
+    })
+  </script>
+</body>
 ```
 
 ### Required Params
@@ -57,7 +94,8 @@ Name of the theme to use.
 Things to Note
 -----------
 
-+ Width and height are hardcoded. Be sure to specify the default values (500x250 or 300x250) in your iframe and overload those values in the css if you want to change them.
++ Width and height are hardcoded. Be sure to specify the default values (500x250 or 300x250) in your iframe 
+and overload those values in the css if you want to change them.
 
 + The widget currently depends on jquery, jquery.timeago.
 
