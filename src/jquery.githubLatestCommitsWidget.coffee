@@ -74,10 +74,7 @@
       ).success (response) ->
         callback(response)
 
-  # A really lightweight plugin wrapper around the constructor,
-  # preventing against multiple instantiations
   $.fn[pluginName] = (options) ->
     @each ->
-      #if !$.data(this, "plugin_#{pluginName}")
       $.data(@, "plugin_#{pluginName}", new Plugin(@, options))
 )(jQuery, window)
