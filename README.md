@@ -36,15 +36,19 @@ Name of the theme to use.
 ### Available Themes
 
 'default':
+
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_default.png)
 
 'dark':
+
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_dark.png)
 
 'mini':
+
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_mini.png)
 
 'mini-dark':
+
 ![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_mini-dark.png)
 
 **NOTE**: Custom themes are not supported yet with the `iframe` technique yet, but I intend to add this soon.
