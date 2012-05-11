@@ -14,7 +14,7 @@ Usage
 This widget is hosted via GitHub Pages, meaning all you need to do is include an iframe in your html and you're good to go. There are only 3 params at the moment: username, repo, and limit.
 
 ``` html
-<iframe src="http://tylerlh.github.com/github-latest-commits-widget/?username=USERNAME&repo=REPO&limit=LIMIT"
+<iframe src="http://namuol.github.com/github-latest-commits-widget/?username=USERNAME&repo=REPO&limit=LIMIT"
   allowtransparency="true" frameborder="0" scrolling="no" width="502px" height="252px"></iframe>
 ```
 
@@ -29,6 +29,23 @@ GitHub repository to check for activity
 `limit`<br>
 The maximum number of results to list
 
+### Optional Params
+
+`theme`<br>
+Name of the theme to use.
+
+#### `'default'`
+![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_default.png)
+
+#### `'dark'`
+![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_dark.png)
+
+#### `'mini'`
+![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_mini.png)
+
+#### `'mini-dark'`
+![](https://github.com/namuol/jquery.githubLatestCommitsWidget/raw/master/theme_mini-dark.png)
+
 
 Things to Note
 -----------
@@ -42,24 +59,27 @@ Things to Note
 Bug tracker
 -----------
 
-Have a bug? Open a new issue at https://github.com/tylerlh/github-latest-commits-widget/issues
-
+Have a bug? Open a new issue at https://github.com/namuol/jquery.githubLatestCommitsWidget/issues
 
 
 Authors
 -------
 
-**Tyler Hughes**
+**Tyler Hughes** (original project)
 
 + http://twitter.com/iamstyxxx
 + http://github.com/tylerlh
 
+**Louis Acresti** (jquery plugin)
+
++ http://twitter.com/louroboros
++ http://namuol.github.com
 
 
 Copyright and license
 ---------------------
 
-Copyright 2012 Tyler Hughes.
+Copyright 2012 Tyler Hughes & Louis Acresti.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
