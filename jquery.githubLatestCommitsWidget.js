@@ -29,7 +29,17 @@
           _ref = response.data;
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             result = _ref[_i];
-            items_html += "<li>\n  <img class='commit-avatar' src='" + result.author.avatar_url + "'>\n  <div class='commit-author'><a href='https://github.com/" + result.author.login + "'>\n    " + result.author.login + "\n  </a></div>\n  <div class='commit-date'>" + ($.timeago(result.commit.committer.date)) + "</div>\n  <div class='commit-sha'>SHA: " + result.sha + "</div>\n  <a class='commit-message' href='https://github.com/" + _this.options.username + "/" + _this.options.repo + "/commit/" + result.sha + "' target='_blank'>" + result.commit.message + "</a>\n</li>";
+            if (!result.author) {
+              console.log(result);
+              result.author = {
+                login: result.commit.author.email,
+                url: "mailto:" + result.commit.author.email,
+                avatar_url: 'github_default_avatar.png'
+              };
+            } else {
+              result.author.url = "https://github.com/" + result.author.login;
+            }
+            items_html += "<li>\n  <img class='commit-avatar' src='" + result.author.avatar_url + "'>\n  <div class='commit-author'><a href='" + result.author.url + "'>\n    " + result.author.login + "\n  </a></div>\n  <div class='commit-date'>" + ($.timeago(result.commit.committer.date)) + "</div>\n  <div class='commit-sha'>SHA: " + result.sha + "</div>\n  <a class='commit-message' href='https://github.com/" + _this.options.username + "/" + _this.options.repo + "/commit/" + result.sha + "' target='_blank'>" + result.commit.message + "</a>\n</li>";
           }
           return $(_this.element).html("<div class='latest-commits-widget'>\n  <div class='latest-commits-header'>\n    <div class='latest-commits-header-text'>Latest Commits to " + _this.options.username + "/" + _this.options.repo + "</div>\n  </div>\n  <ul class='commit-history'>\n  " + items_html + "\n  </ul>\n</div>");
         };

@@ -42,10 +42,18 @@
         items_html = ''
 
         for result in response.data
+          if not result.author
+            result.author =
+              login: result.commit.author.email
+              url: "mailto:#{result.commit.author.email}"
+              avatar_url: 'github_default_avatar.png'
+          else
+            result.author.url = "https://github.com/#{result.author.login}"
+
           items_html += """
             <li>
               <img class='commit-avatar' src='#{result.author.avatar_url}'>
-              <div class='commit-author'><a href='https://github.com/#{result.author.login}'>
+              <div class='commit-author'><a href='#{result.author.url}'>
                 #{result.author.login}
               </a></div>
               <div class='commit-date'>#{$.timeago(result.commit.committer.date)}</div>
