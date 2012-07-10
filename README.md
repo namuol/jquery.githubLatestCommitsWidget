@@ -89,8 +89,7 @@ Name of the theme to use.
 
 If you've created a new theme, [I'd love to add it to the official repo](https://github.com/namuol/jquery.githubLatestCommitsWidget/pulls)!
 
-**NOTE**: Custom themes are not supported yet with the `iframe` technique yet, but I intend to add this soon.
-
+**NOTE**: Custom themes are not supported with the `iframe` technique.
 
 Things to Note
 -----------
